@@ -1,0 +1,53 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/using-atom-basic-customization#customizing-key-bindings
+# * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'atom-text-editor.vim-mode':
+  'cmd-[': 'vim-mode:reset-normal-mode'
+
+'atom-text-editor.vim-mode.insert-mode':
+  'cmd-p': 'autocomplete-plus:activate'
+
+'atom-text-editor.vim-mode:not(.normal-mode)':
+  'cmd-[': 'vim-mode:activate-normal-mode'
+
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  'cmd-u': 'vim-mode:scroll-half-screen-up'
+  'cmd-d': 'vim-mode:scroll-half-screen-down'
+  'cmd-w c': 'pane:close'
+  'cmd-w h': 'window:focus-pane-on-left'
+  'cmd-w j': 'window:focus-pane-below'
+  'cmd-w k': 'window:focus-pane-above'
+  'cmd-w l': 'window:focus-pane-on-right'
+  'cmd-w s': 'pane:split-down'
+  'cmd-w v': 'pane:split-right'
+  'cmd-w w': 'window:focus-next-pane:'
+
+'body':
+  'cmd-h': null
+  'cmd-w': null
+  'cmd-o': 'fuzzy-finder:toggle-file-finder'
