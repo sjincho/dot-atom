@@ -7,3 +7,5 @@
   core: {}
   editor:
     invisibles: {}
+  "imdone-atom": {}
+  minimap: {}
