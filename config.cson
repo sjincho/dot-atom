@@ -7,5 +7,6 @@
   core: {}
   editor:
     invisibles: {}
+    scrollPastEnd: true
   "imdone-atom": {}
   minimap: {}

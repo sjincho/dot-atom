@@ -32,6 +32,11 @@
 'atom-text-editor.vim-mode.insert-mode':
   'cmd-p': 'autocomplete-plus:activate'
 
+'atom-text-editor.vim-mode.normal-mode':
+  'cmd-i': 'cursor-history:next'
+  'cmd-o': 'cursor-history:prev'
+  'cmd-r': 'core:redo'
+
 'atom-text-editor.vim-mode:not(.normal-mode)':
   'cmd-[': 'vim-mode:activate-normal-mode'
 
@@ -46,8 +51,9 @@
   'cmd-w s': 'pane:split-down'
   'cmd-w v': 'pane:split-right'
   'cmd-w w': 'window:focus-next-pane:'
+  'cmd-w x': 'move-panes:move-next'
 
 'body':
   'cmd-h': null
   'cmd-w': null
-  'cmd-o': 'fuzzy-finder:toggle-file-finder'
+  'cmd-shift-o': 'fuzzy-finder:toggle-file-finder'
